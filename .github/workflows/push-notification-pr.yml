@@ -18,11 +18,12 @@ jobs:
         with:
           server_address: smtp.gmail.com
           server_port: 465
-          username: ${{ secrets.EMAIL }}
-          password: ${{ secrets.PASSWORD }}
-          to: ${{ secrets.EMAIL_TO }}
-          from: ${{ secrets.EMAIL_FROM }}
-          subject: 'Push Notification for PR - ${{ github.event_name }}' 
+          username: ${{secrets.EMAIL}}
+          password: ${{secrets.PASSWORD}}
+          to: ${{secrets.EMAIL_TO}}
+          from: ${{secrets.EMAIL_FROM}}
+          subject: 'Push Notification for PR - ${{github.event_name}}' 
+          
           html_body: |  
             <html lang="en"> 
             <head>
